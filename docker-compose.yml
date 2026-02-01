@@ -1,0 +1,14 @@
+services:
+  streamlit:
+    build: .
+    container_name: ia-streamlit
+    env_file: .env
+    ports:
+      - "${STREAMLIT_SERVER_PORT:-8501}:8501"
+    volumes:
+      # Tu récupères tes CSV générés côté machine
+      - ./outputs:/app/outputs
+      # (optionnel) si tu veux garder data/examples etc
+      - ./data:/app/data
+      - ./models:/app/models
+    restart: unless-stopped

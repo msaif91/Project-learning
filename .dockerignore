@@ -1,0 +1,14 @@
+.venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints
+outputs/
+data/
+models/
+.env
+.git
+.gitignore
+.vscode/
+.DS_Store
